@@ -11,9 +11,10 @@ public class DataUtility {
     }
 
     public static String buildPostJson(Map<String, String> row) {
+        String userIdStr = row.containsKey("userId") ? row.get("userId") : row.get("user_id");
         return buildPostJson(
                 row.get("title"),
                 row.get("body"),
-                Integer.parseInt(row.get("user_id")));
+                Integer.parseInt(userIdStr));
     }
 }
