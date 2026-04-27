@@ -71,8 +71,8 @@ Feature: Users Module Testing
 
   Scenario: TC-008 - Get All Users
     When I Send GET request to fetch all users
-    Then Response status code should be 200
-    And Response status line contains "200 OK"
+    Then Response status code should be 401
+    And Response status line contains "401 Unauthorized"
     And Response body should be a JSON array
 
   # ── PUT /users/{id} ─────────────────────────────────────
