@@ -230,7 +230,8 @@ public class PostStep {
     @Then("Response body indicates duplicate or incorrect data issue")
     public void responseBodyIndicatesDuplicateOrIncorrectData() {
         int statusCode = response.getStatusCode();
-        Assert.assertTrue(statusCode == 400 || statusCode == 409 || statusCode == 422, "Duplicate Data Validation Failed");
+        Assert.assertTrue(statusCode == 400 || statusCode == 409 || statusCode == 422,
+                "Duplicate Data Validation Failed");
     }
 
     @Then("Response body indicates invalid data error")
@@ -247,6 +248,7 @@ public class PostStep {
     @Then("Response body indicates authentication or authorization failure")
     public void responseBodyIndicatesAuthFailure() {
         int statusCode = response.getStatusCode();
-        Assert.assertTrue(statusCode == 401 || statusCode == 403 || statusCode == 404, "Auth Failure Validation Failed");
+        Assert.assertTrue(statusCode == 401 || statusCode == 403 || statusCode == 404,
+                "Auth Failure Validation Failed");
     }
 }
