@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>12/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 28 09:37:24 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>27 seconds (27948 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-013 - GET /todos with No Auth returns 401", "Todos Module Testing"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Expected status 401 but got 200. Body: [{&quot;id&quot;:102990,&quot;user_id&quot;:8451161,&quot;title&quot;:&quot;Nemo tero paulatim caute amiculum ab viduata victoria.&quot;,&quot;due_on&quot;:&quot;2026-05-12T00:00:00.000+05:30&quot;,&quot;status&quot;:&quot;pending&quot;},{&quot;id&quot;:102989,&quot;user_id&quot;:8451160,&quot;title&quot;:&quot;Calco inventore sed venia debitis condico aestus arbustum strues.&quot;,&quot;due_on&quot;:&quot;2026-05-06T00:00:00.000+0,
+	Status line [HTTP/1.1 200 OK] does not contain: Unauthorized,
+	Expected 401 or 403 for auth failure but got 200
+	at hooks.Hooks.afterScenario(Hooks.java:27)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1493772379", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1493772379'><pre>java.lang.AssertionError: The following asserts failed:
+	Expected status 401 but got 200. Body: [{&quot;id&quot;:102990,&quot;user_id&quot;:8451161,&quot;title&quot;:&quot;Nemo tero paulatim caute amiculum ab viduata victoria.&quot;,&quot;due_on&quot;:&quot;2026-05-12T00:00:00.000+05:30&quot;,&quot;status&quot;:&quot;pending&quot;},{&quot;id&quot;:102989,&quot;user_id&quot;:8451160,&quot;title&quot;:&quot;Calco inventore sed venia debitis condico aestus arbustum strues.&quot;,&quot;due_on&quot;:&quot;2026-05-06T00:00:00.000+0,
+	Status line [HTTP/1.1 200 OK] does not contain: Unauthorized,
+	Expected 401 or 403 for auth failure but got 200
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at hooks.Hooks.afterScenario(Hooks.java:27)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-007 - Get All Todos", "Todos Module Testing"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Schema file not found: schemas/TodoList.json – create it at src/test/resources/schemas/TodoList.json
+	at hooks.Hooks.afterScenario(Hooks.java:27)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1991656106", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1991656106'><pre>java.lang.AssertionError: The following asserts failed:
+	Schema file not found: schemas/TodoList.json – create it at src/test/resources/schemas/TodoList.json
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at hooks.Hooks.afterScenario(Hooks.java:27)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-005 - Get Todo by Valid ID", "Todos Module Testing"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Schema file not found: schemas/Todo.json – create it at src/test/resources/schemas/Todo.json
+	at hooks.Hooks.afterScenario(Hooks.java:27)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace416427727", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace416427727'><pre>java.lang.AssertionError: The following asserts failed:
+	Schema file not found: schemas/Todo.json – create it at src/test/resources/schemas/Todo.json
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at hooks.Hooks.afterScenario(Hooks.java:27)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestRunner@37918c79</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-002 - Create Todo using Excel Data", "Todos Module Testing"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-001 - Create Todo with Valid Payload", "Todos Module Testing"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-009 - Update Todo using DataTable", "Todos Module Testing"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-006 - Get Todo by Invalid ID", "Todos Module Testing"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-010 - Update Todo with Invalid ID", "Todos Module Testing"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-011 - Delete Todo", "Todos Module Testing"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-004 - Create Todo with Invalid User ID", "Todos Module Testing"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-008 - Update Todo using Excel Data", "Todos Module Testing"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-012 - POST Todo with Invalid Token", "Todos Module Testing"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-003 - Create Todo using DataTable", "Todos Module Testing"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-001 - Create Todo with Valid Payload", "Todos Module Testing"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunner@37918c79</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC-001 - Create Todo with Valid Payload", "Todos Module Testing"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@37918c79</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 28.66 s <<< FAILURE! -- in TestSuite
+runner.TestRunner.runScenario["TC-005 - Get Todo by Valid ID", "Todos Module Testing"](7) -- Time elapsed: 1.114 s <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	Schema file not found: schemas/Todo.json – create it at src/test/resources/schemas/Todo.json
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at hooks.Hooks.afterScenario(Hooks.java:27)
+
+runner.TestRunner.runScenario["TC-007 - Get All Todos", "Todos Module Testing"](9) -- Time elapsed: 1.441 s <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	Schema file not found: schemas/TodoList.json – create it at src/test/resources/schemas/TodoList.json
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at hooks.Hooks.afterScenario(Hooks.java:27)
+
+runner.TestRunner.runScenario["TC-013 - GET /todos with No Auth returns 401", "Todos Module Testing"](15) -- Time elapsed: 0.875 s <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	Expected status 401 but got 200. Body: [{"id":102990,"user_id":8451161,"title":"Nemo tero paulatim caute amiculum ab viduata victoria.","due_on":"2026-05-12T00:00:00.000+05:30","status":"pending"},{"id":102989,"user_id":8451160,"title":"Calco inventore sed venia debitis condico aestus arbustum strues.","due_on":"2026-05-06T00:00:00.000+0,
+	Status line [HTTP/1.1 200 OK] does not contain: Unauthorized,
+	Expected 401 or 403 for auth failure but got 200
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at hooks.Hooks.afterScenario(Hooks.java:27)
+
