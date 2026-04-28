@@ -9,25 +9,10 @@ import io.cucumber.java.Scenario;
 
 public class Hooks extends BaseTest{
 
-    public static SoftAssert softAssert;
-    public static Scenario scenario;
-
-	@Before
-    public void beforeScenario(Scenario scenario) {
-        setup();
-        Hooks.softAssert = new SoftAssert();
-        Hooks.scenario = scenario;
-        
-        System.out.println("----- Test Started -----");
+public class Hooks {
+  
+    @Before
+    public void setBaseUrl() {
+        BaseClass.setup();
     }
-
-    @After
-    public void afterScenario() {
-        try {
-            softAssert.assertAll();
-        } finally {
-            System.out.println("----- Test Finished -----");
-        }
-    }
-	
 }
