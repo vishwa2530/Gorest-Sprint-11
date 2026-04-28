@@ -1,12 +1,24 @@
 package utils;
 
-import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DataUtility {
 
-    private static final ObjectMapper mapper = new ObjectMapper();
+    public static String buildPostJson(String title, String body, int userId) {
+        return String.format(
+                "{\"user_id\":%d,\"title\":\"%s\",\"body\":\"%s\"}",
+                userId, title, body);
+    }
+
+    public static String buildPostJson(Map<String, String> row) {
+        String userIdStr = row.containsKey("userId") ? row.get("userId") : row.get("user_id");
+        return buildPostJson(
+                row.get("title"),
+                row.get("body"),
+                Integer.parseInt(userIdStr));
+    }
+    
+        private static final ObjectMapper mapper = new ObjectMapper();
 
     public static int getValidPostId() {
         try {
